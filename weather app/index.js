@@ -4,7 +4,7 @@ const http = require("http");
 const fs = require("fs");
 var requests = require("requests")
 
-const homefile = fs.readFileSync("home.html", "utf-8");
+const homefile = fs.readFileSync("index.html", "utf-8");
 const replaceval = (tempval, orgval) => {
   let temp = tempval.replace("{%tempval%}", parseInt(orgval.main.temp-273));
   temp = temp.replace("{%tempmin%}", parseInt(orgval.main.temp_min-273));
